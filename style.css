@@ -1,0 +1,140 @@
+body {
+    background-color: #16193e;
+    color: #94a3b8;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+header {
+    background-color: #16193e;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px; /* Assicurati che la larghezza sia corretta */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow-y: auto; /* Per gestire lo scroll interno, se necessario */
+    z-index: 1000; /* Per assicurarti che il header sia sopra altri elementi */
+}
+
+.section-title {
+    color: #64ffda;
+}
+
+.card {
+    background-color: #10182d;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    background-color: #16193e;
+    border-color: #64ffda;
+    color: #64ffda;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #64ffda;
+    border-color: #64ffda;
+    color: #16193e;
+}
+
+.btn:focus, .btn:active {
+    background-color: #52e6c4; /* Colore quando cliccato */
+    border-color: #52e6c4;
+    color: #ffffff;
+    outline: none; /* Rimuove il bordo predefinito dello stato di focus */
+}
+
+main {
+    margin-left: 350px; /* Lo stesso valore della larghezza del header */
+    padding: 20px;
+    background-color: transparent;
+}
+
+.social-icons {
+    margin-top: 20px; /* Spazio sopra le icone */
+    gap: 15px;
+    font-size: 36px;
+    text-align: left; /* Allinea le icone a sinistra */
+}
+
+.upwork-icon {
+    margin-bottom: 7px;
+    width: 40px;
+    height: 40px;
+}
+
+/* Style for the nav links with the underline effect */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    color: #64ffda !important;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #64ffda;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    width: 100%;
+}
+
+/* Optional: Add spacing between the links */
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the gap between nav links */
+}
+
+.form-label {
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.5rem; /* Ingrandisce un po' il testo */
+    font-weight: bold; /* Rende il testo in grassetto */
+    color: #64ffda; /* Colore distintivo per far risaltare il titolo */
+    letter-spacing: 2px; /* Aggiunge spazio tra le lettere per un effetto di impatto */
+    margin-bottom: 1rem; /* Aggiunge uno spazio inferiore per separarlo dagli altri elementi */
+}
+
+.skill-item h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.progress {
+    height: 1.5rem;
+    background-color: #2d3748;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #16193e;
+    text-align: center;
+    border-radius: 5px;
+}

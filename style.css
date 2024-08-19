@@ -5,22 +5,31 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    overflow-x: hidden; /* Evita scrollbar orizzontali */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     background-color: #16193e;
     color: #ffffff;
+    width: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden; /* Rimosso overflow-y per evitare scrollbar */
+    z-index: 1000;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    width: 300px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    overflow: auto; /* Aggiunto overflow:auto per adattare il contenuto */
-    z-index: 1000;
+    height: 100%;
+}
+
+main {
+    margin-left: 300px;
+    padding: 20px;
+    flex: 1;
+    background-color: transparent;
 }
 
 .section-title {
@@ -46,23 +55,17 @@ header {
 }
 
 .btn:focus, .btn:active {
-    background-color: #52e6c4; /* Colore quando cliccato */
+    background-color: #52e6c4;
     border-color: #52e6c4;
     color: #ffffff;
-    outline: none; /* Rimuove il bordo predefinito dello stato di focus */
-}
-
-main {
-    margin-left: 300px; /* Allinea il main accanto al header */
-    padding: 20px;
-    background-color: transparent;
+    outline: none;
 }
 
 .social-icons {
-    margin-top: 20px; /* Spazio sopra le icone */
+    margin-top: 20px;
     gap: 15px;
     font-size: 36px;
-    text-align: left; /* Allinea le icone a sinistra */
+    text-align: left;
 }
 
 .upwork-icon {
@@ -71,7 +74,6 @@ main {
     height: 40px;
 }
 
-/* Style for the nav links with the underline effect */
 .nav-link {
     position: relative;
     padding: 0.5rem 0;
@@ -102,11 +104,10 @@ main {
     width: 100%;
 }
 
-/* Optional: Add spacing between the links */
 .nav {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Adjust the gap between nav links */
+    gap: 10px;
 }
 
 .form-label {
@@ -114,11 +115,11 @@ main {
 }
 
 h2 {
-    font-size: 1.5rem; /* Ingrandisce un po' il testo */
-    font-weight: bold; /* Rende il testo in grassetto */
-    color: #64ffda; /* Colore distintivo per far risaltare il titolo */
-    letter-spacing: 2px; /* Aggiunge spazio tra le lettere per un effetto di impatto */
-    margin-bottom: 1rem; /* Aggiunge uno spazio inferiore per separarlo dagli altri elementi */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #64ffda;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
 }
 
 .skill-item h4 {
@@ -141,35 +142,34 @@ h2 {
     border-radius: 5px;
 }
 
-/* Stili per le risoluzioni ridotte */
 @media (max-width: 768px) {
     header {
-        width: 100%; /* Fa sì che il header occupi tutta la larghezza */
+        width: 100%;
         height: auto;
-        position: relative; /* Cambia il posizionamento per essere sopra il main */
+        position: relative;
     }
 
     main {
-        margin-left: 0; /* Fa sì che il main venga posizionato sotto al header */
-        margin-top: 20px; /* Spazio tra il header e il main */
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 10px;
     }
 
     .nav {
-        align-items: center; /* Centra i link del nav in visualizzazione mobile */
+        align-items: center;
     }
 
     .social-icons {
-        justify-content: center; /* Allinea le icone social al centro per schermi piccoli */
+        justify-content: center;
     }
 }
 
-/* Regole per schermi più grandi */
 @media (min-width: 1200px) {
-    main {
-        margin-left: 350px; /* Aumenta il margine per schermi più grandi */
+    header {
+        width: 350px;
     }
 
-    header {
-        width: 350px; /* Aumenta la larghezza del header per schermi più grandi */
+    main {
+        margin-left: 350px;
     }
 }

@@ -1,3 +1,4 @@
+/* Stili generali */
 body {
     background-color: #16193e;
     color: #94a3b8;
@@ -5,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    overflow-x: hidden; /* Evita scrollbar orizzontali */
 }
 
 header {
@@ -14,31 +16,11 @@ header {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
-    max-width: 300px;
+    width: 300px;
     padding-top: 20px;
     padding-bottom: 20px;
-    overflow-y: auto;
+    overflow: auto; /* Aggiunto overflow:auto per adattare il contenuto */
     z-index: 1000;
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    header {
-        width: 100%; /* The header takes full width on small screens */
-        position: relative;
-        top: 0;
-    }
-
-    main {
-        margin-left: 0;
-        margin-top: 20px;
-        padding: 10px;
-    }
-
-    .social-icons {
-        justify-content: center; /* Centers social icons on small screens */
-    }
 }
 
 .section-title {
@@ -64,23 +46,30 @@ header {
 }
 
 .btn:focus, .btn:active {
-    background-color: #52e6c4;
+    background-color: #52e6c4; /* Colore quando cliccato */
     border-color: #52e6c4;
     color: #ffffff;
-    outline: none;
+    outline: none; /* Rimuove il bordo predefinito dello stato di focus */
 }
 
 main {
-    margin-left: 350px;
+    margin-left: 300px; /* Allinea il main accanto al header */
     padding: 20px;
     background-color: transparent;
 }
 
+/* Aumenta il margine sinistro del main su schermi molto larghi */
+@media (min-width: 1200px) {
+    main {
+        margin-left: 400px; /* Aumenta il margine sinistro per schermi larghi */
+    }
+}
+
 .social-icons {
-    margin-top: 20px;
+    margin-top: 20px; /* Spazio sopra le icone */
     gap: 15px;
     font-size: 36px;
-    text-align: left;
+    text-align: left; /* Allinea le icone a sinistra */
 }
 
 .upwork-icon {
@@ -89,6 +78,7 @@ main {
     height: 40px;
 }
 
+/* Style for the nav links with the underline effect */
 .nav-link {
     position: relative;
     padding: 0.5rem 0;
@@ -119,10 +109,11 @@ main {
     width: 100%;
 }
 
+/* Optional: Add spacing between the links */
 .nav {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px; /* Adjust the gap between nav links */
 }
 
 .form-label {
@@ -130,11 +121,11 @@ main {
 }
 
 h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #64ffda;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Ingrandisce un po' il testo */
+    font-weight: bold; /* Rende il testo in grassetto */
+    color: #64ffda; /* Colore distintivo per far risaltare il titolo */
+    letter-spacing: 2px; /* Aggiunge spazio tra le lettere per un effetto di impatto */
+    margin-bottom: 1rem; /* Aggiunge uno spazio inferiore per separarlo dagli altri elementi */
 }
 
 .skill-item h4 {
@@ -155,4 +146,22 @@ h2 {
     color: #16193e;
     text-align: center;
     border-radius: 5px;
+}
+
+/* Stili per le risoluzioni ridotte */
+@media (max-width: 768px) {
+    header {
+        width: 100%; /* Fa sì che il header occupi tutta la larghezza */
+        height: auto;
+        position: relative; /* Cambia il posizionamento per essere sopra il main */
+    }
+
+    main {
+        margin-left: 0; /* Fa sì che il main venga posizionato sotto al header */
+        margin-top: 20px; /* Spazio tra il header e il main */
+    }
+
+    .social-icons {
+        justify-content: center; /* Allinea le icone social al centro per schermi piccoli */
+    }
 }

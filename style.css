@@ -58,13 +58,6 @@ main {
     background-color: transparent;
 }
 
-/* Aumenta il margine sinistro del main su schermi molto larghi */
-@media (min-width: 1200px) {
-    main {
-        margin-left: 400px; /* Aumenta il margine sinistro per schermi larghi */
-    }
-}
-
 .social-icons {
     margin-top: 20px; /* Spazio sopra le icone */
     gap: 15px;
@@ -161,7 +154,22 @@ h2 {
         margin-top: 20px; /* Spazio tra il header e il main */
     }
 
+    .nav {
+        align-items: center; /* Centra i link del nav in visualizzazione mobile */
+    }
+
     .social-icons {
         justify-content: center; /* Allinea le icone social al centro per schermi piccoli */
+    }
+}
+
+/* Regole per schermi più grandi */
+@media (min-width: 1200px) {
+    main {
+        margin-left: 350px; /* Aumenta il margine per schermi più grandi */
+    }
+
+    header {
+        width: 350px; /* Aumenta la larghezza del header per schermi più grandi */
     }
 }

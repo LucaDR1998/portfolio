@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Evita scrollbar orizzontali */
 }
 
 header {
@@ -16,7 +17,7 @@ header {
     width: 300px;
     padding-top: 20px;
     padding-bottom: 20px;
-    overflow: hidden; /* Rimosso overflow-y per evitare scrollbar */
+    overflow: hidden; /* Evita scrollbar */
     z-index: 1000;
     position: fixed;
     top: 0;

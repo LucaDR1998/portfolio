@@ -14,11 +14,31 @@ header {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 300px; /* Assicurati che la larghezza sia corretta */
+    width: 100%;
+    max-width: 300px;
     padding-top: 20px;
     padding-bottom: 20px;
-    overflow-y: auto; /* Per gestire lo scroll interno, se necessario */
-    z-index: 1000; /* Per assicurarti che il header sia sopra altri elementi */
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        width: 100%; /* The header takes full width on small screens */
+        position: relative;
+        top: 0;
+    }
+
+    main {
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .social-icons {
+        justify-content: center; /* Centers social icons on small screens */
+    }
 }
 
 .section-title {
@@ -44,23 +64,23 @@ header {
 }
 
 .btn:focus, .btn:active {
-    background-color: #52e6c4; /* Colore quando cliccato */
+    background-color: #52e6c4;
     border-color: #52e6c4;
     color: #ffffff;
-    outline: none; /* Rimuove il bordo predefinito dello stato di focus */
+    outline: none;
 }
 
 main {
-    margin-left: 350px; /* Lo stesso valore della larghezza del header */
+    margin-left: 350px;
     padding: 20px;
     background-color: transparent;
 }
 
 .social-icons {
-    margin-top: 20px; /* Spazio sopra le icone */
+    margin-top: 20px;
     gap: 15px;
     font-size: 36px;
-    text-align: left; /* Allinea le icone a sinistra */
+    text-align: left;
 }
 
 .upwork-icon {
@@ -69,7 +89,6 @@ main {
     height: 40px;
 }
 
-/* Style for the nav links with the underline effect */
 .nav-link {
     position: relative;
     padding: 0.5rem 0;
@@ -100,11 +119,10 @@ main {
     width: 100%;
 }
 
-/* Optional: Add spacing between the links */
 .nav {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Adjust the gap between nav links */
+    gap: 10px;
 }
 
 .form-label {
@@ -112,11 +130,11 @@ main {
 }
 
 h2 {
-    font-size: 1.5rem; /* Ingrandisce un po' il testo */
-    font-weight: bold; /* Rende il testo in grassetto */
-    color: #64ffda; /* Colore distintivo per far risaltare il titolo */
-    letter-spacing: 2px; /* Aggiunge spazio tra le lettere per un effetto di impatto */
-    margin-bottom: 1rem; /* Aggiunge uno spazio inferiore per separarlo dagli altri elementi */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #64ffda;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
 }
 
 .skill-item h4 {
